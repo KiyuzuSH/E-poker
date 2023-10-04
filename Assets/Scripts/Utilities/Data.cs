@@ -1,0 +1,12 @@
+
+
+namespace Game
+{
+	/// <summary>
+	/// Êý¾ÝÀà
+	/// </summary>
+	public class Data
+	{
+
+	}
+}
