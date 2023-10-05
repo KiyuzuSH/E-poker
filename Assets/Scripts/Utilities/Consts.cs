@@ -74,11 +74,10 @@ namespace Game
 		Double,//对
 		Straight,//顺子
 		DoubleStraight,//姐妹花
-		TripleStraight,//三张的顺子
+		TripleStraight,//飞机
 		Three,//三张
 		ThreeOne,//三带一
 		ThreeTwo,//三带二
-		Plane,//飞机
 		Bomb,//炸弹
 		JokerBomb,
 	}
