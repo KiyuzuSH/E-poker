@@ -18,7 +18,7 @@ namespace Game
 		/// <summary> ≥ı ºªØ≈∆ø‚ </summary>
 		public void InitCardLibrary()
 		{
-			for(int colour = 0; colour < 4; colour++)
+			for(int colour = 1; colour < 5; colour++)
 			{
 				for(int weight = 0; weight < 13; weight++)
 				{
@@ -56,7 +56,7 @@ namespace Game
 		public void Shuffle()
 		{
 			List<Card> newList=new List<Card>();
-			foreach(Card card in newList)
+			foreach(Card card in cardLibrary)
 			{
 				int index=Random.Range(0,newList.Count+1);
 				newList.Insert(index, card);

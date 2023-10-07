@@ -9,12 +9,15 @@ namespace Game
 	{
 		/// <summary> 玩家出牌事件 </summary>
 		public static Action PlayerHandler;
+
 		/// <summary> 他人出牌事件 </summary>
 		public static Action OthersHandler;
 		
 		private CharacterType biggestCharacter;
 		private CharacterType currentCharacter;
+
 		private CardType currentType;
+
 		private int currentWeight;
 		private int currentLength;
 
@@ -69,30 +72,24 @@ namespace Game
 		{
 			this.currentCharacter = cType;
 			this.biggestCharacter = cType;
-			if(cType == CharacterType.Player1)
-			{
-				//玩家出牌
-				if(PlayerHandler != null)
-					PlayerHandler();
-			}
-			else
-			{
-				//等人出牌
-				if(OthersHandler != null)
-					OthersHandler();
-			}
+			BeginWith(cType);
 		}
 
 		/// <summary> 转换出牌 </summary>
 		public void Turn()
 		{
-			do
-			{
-				currentCharacter += 1;
-			}
-			while(currentCharacter == CharacterType.Library || currentCharacter == CharacterType.Desk);
+			currentCharacter++;
+			if(currentCharacter == CharacterType.Library || currentCharacter == CharacterType.Desk)
+				currentCharacter=CharacterType.PlayerC;
 
-			if(currentCharacter == CharacterType.Player1)
+			BeginWith(currentCharacter);
+		}
+
+		/// <summary> 开始出牌 </summary>
+		/// <param name="cType"> 谁 </param>
+		private static void BeginWith(CharacterType cType)
+		{
+			if(cType == CharacterType.PlayerC)
 			{
 				//玩家出牌
 				if(PlayerHandler != null)
@@ -104,9 +101,6 @@ namespace Game
 				if(OthersHandler != null)
 					OthersHandler();
 			}
-
 		}
-
-
 	}
 }

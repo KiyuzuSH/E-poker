@@ -2,6 +2,7 @@ using UnityEngine;
 using System.IO;
 using System.Text;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Game
 {
@@ -26,7 +27,7 @@ namespace Game
 		/// <returns> 返回 UI 实例 </returns>
 		public static GameObject CreateUIPanel(PanelType panelType)
 		{
-			GameObject prefab=Resources.Load<GameObject>("Prefabs/"+panelType.ToString());
+			GameObject prefab=Resources.Load<GameObject>("Prefabs/"+panelType.ToString()+"Panel");
 			if(null == prefab)
 			{
 				Debug.LogWarning("名为 " + panelType.ToString() + " 的 UI 面板不存在");
@@ -68,6 +69,22 @@ namespace Game
 			stream.Close();
 			sr.Close();
 			return data;
+		}
+
+		/// <summary> 卡牌排序 </summary>
+		/// <param name="cards"> 选择的牌 </param>
+		/// <param name="asc"> 是否升序 </param>
+		public static void Sort(List<Card> cards, bool asc)
+		{
+			cards.Sort(
+				(Card a, Card b) =>
+				{
+					if(asc)
+						return a.CardWeight.CompareTo(b.CardWeight);
+					else
+						return -a.CardWeight.CompareTo(b.CardWeight);
+				}
+				);
 		}
 	}
 }

@@ -15,10 +15,14 @@ namespace Game
 			injectionBinder.Bind<RoundModel>().To<RoundModel>().ToSingleton();
 
 			mediationBinder.BindView<StartView>().ToMediator<StartMediator>();
+			mediationBinder.BindView<InteractionView>().ToMediator<InteractionMediator>();
+			mediationBinder.Bind<CharacterView>().To<CharacterMediator>();
 
-			commandBinder.Bind(ContextEvent.START).To<StartCommand>().Once();
 			commandBinder.Bind(CommandEvent.StartGame).To<StartButtonCommand>();
 			commandBinder.Bind(CommandEvent.QuitGame).To<QuitButtonCommand>();
+			commandBinder.Bind(CommandEvent.RequestDeal).To<RequestDealCommand>();
+
+			commandBinder.Bind(ContextEvent.START).To<StartCommand>().Once();
 		}
 	}
 }

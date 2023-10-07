@@ -1,20 +1,17 @@
 using strange.extensions.command.impl;
 using System.IO;
-using UnityEditor;
-using UnityEngine;
 
 namespace Game
 {
 	public class StartCommand : Command
 	{
-		[Inject]
-		public CardModel CardModel { get; set; }
+		[Inject] public CardModel CardModel { get; set; }
 
-		[Inject]
-		public RoundModel RoundModel { get; set; }
+		[Inject] public RoundModel RoundModel { get; set; }
+
 		public override void Execute()
 		{
-			Utilities.CreateUIPanel(PanelType.StartPanel);
+			Utilities.CreateUIPanel(PanelType.Start);
 			// 初始化
 			CardModel.InitCardLibrary();
 			RoundModel.InitRound();
@@ -23,6 +20,7 @@ namespace Game
 
 		}
 
+		/// <summary> 获取数据(存档)方法 </summary>
 		private void GetData()
 		{
 			string fileName = Consts.DataPath;

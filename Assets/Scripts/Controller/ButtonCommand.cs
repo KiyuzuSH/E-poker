@@ -3,15 +3,19 @@ using UnityEngine;
 
 namespace Game
 {
-	/// <summary> 按钮功能 </summary>
+	/// <summary> 开始按钮 </summary>
 	public class StartButtonCommand : EventCommand
 	{
 		public override void Execute()
 		{
 			Debug.Log("Run");
+			Utilities.CreateUIPanel(PanelType.Background);
+			Utilities.CreateUIPanel(PanelType.Character);
+			Utilities.CreateUIPanel(PanelType.Interaction);
 		}
 	}
 
+	/// <summary> 退出按钮 </summary>
 	public class QuitButtonCommand : EventCommand
 	{
 		public override void Execute()

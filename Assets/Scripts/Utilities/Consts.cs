@@ -15,6 +15,7 @@ namespace Game
 		QUIT_GAME = -63,
 		START_GAME = -1,
 		TEST = 0,
+		COMPLETE_DEAL = 1,
 	}
 
 	/// <summary> 命令事件类型 </summary>
@@ -22,34 +23,38 @@ namespace Game
 	{
 		QuitGame = -63,
 		StartGame = -1,
-		TEST = 0,
+		Test = 0,
+		RequestDeal = 1,
+		DealCard = 2,
 	}
 
 	/// <summary> UI 面板的类型 </summary>
 	public enum PanelType
 	{
-		StartPanel,
-
+		Start,
+		Background,
+		Character,
+		Interaction,
 	}
 
 	/// <summary> 角色类型 </summary>
 	public enum CharacterType
 	{
-		Library = 0,
-		Player1 = 1,
-		Player2 = 2,
-		Player3 = 3,
-		Desk
+		Library = 0,	// 牌库
+		PlayerC = 1,	// 主视角
+		PlayerL = 2,	// 左边
+		PlayerR = 3,	// 右边
+		Desk			// 牌桌
 	}
 
 	/// <summary> 花色 </summary>
 	public enum Colours
 	{
 		None,
-		Club,//梅花
-		Heart,//红桃
-		Spade,//黑桃
-		Square//方片
+		Club,	//梅花
+		Heart,	//红桃
+		Spade,	//黑桃
+		Square	//方片
 	}
 
 	/// <summary> 卡牌权重 </summary>
@@ -76,15 +81,15 @@ namespace Game
 	public enum CardType
 	{
 		None,
-		Single,//单张
-		Double,//对
-		Straight,//顺子
-		DoubleStraight,//姐妹花
-		TripleStraight,//飞机
-		Three,//三张
-		ThreeOne,//三带一
-		ThreeTwo,//三带二
-		Bomb,//炸弹
+		Single,			//单张
+		Double,         //对子
+		Straight,		//顺子
+		DoubleStraight,	//姐妹花
+		TripleStraight,	//飞机
+		Three,			//三张
+		ThreeOne,		//三带一
+		ThreeTwo,		//三带二
+		Bomb,			//炸弹
 		JokerBomb,
 	}
 }

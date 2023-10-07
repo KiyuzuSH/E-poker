@@ -7,7 +7,7 @@ using UnityEngine.UI;
 namespace Game
 {
 	/// <summary> 卡牌行为类 </summary>
-	public class CardAct : ReuseableObject, IPointerClickHandler
+	public class CardUI : ReuseableObject, IPointerClickHandler
 	{
 		/// <summary> 用来显示的图片 </summary>
 		public Image image;
@@ -29,7 +29,7 @@ namespace Game
 		private void SetImage()
 		{
 			Sprite s;
-			if(card.BelongTo == CharacterType.Player1 || card.BelongTo == CharacterType.Desk)
+			if(card.BelongTo == CharacterType.PlayerC || card.BelongTo == CharacterType.Desk)
 			{
 				s = Resources.Load<Sprite>("Pokers/" + card.CardName);
 				image.sprite = s;
@@ -61,7 +61,7 @@ namespace Game
 		public void OnPointerClick(PointerEventData eventData)
 		{
 			if(eventData.button == PointerEventData.InputButton.Left)
-				if(card.BelongTo == CharacterType.Player1)
+				if(card.BelongTo == CharacterType.PlayerC)
 					Selected = !Selected;
 		}
 
@@ -93,13 +93,22 @@ namespace Game
 			transform.SetParent(parent, false);
 			transform.SetSiblingIndex(index);
 			// 右边
-			if(card.BelongTo == CharacterType.Desk || card.BelongTo == CharacterType.Player1)
+			if(card.BelongTo == CharacterType.Desk || card.BelongTo == CharacterType.PlayerC)
 			{
-				transform.localPosition += Vector3.right * 25 * index;
-				if(isSelected) transform.localPosition += Vector3.up;
+				transform.localPosition = Vector3.right * 25 * index;
+				if(isSelected) transform.localPosition += Vector3.up * 10;
 			}
-			else if(card.BelongTo == CharacterType.Player2 || card.BelongTo == CharacterType.Player3)
+			else if(card.BelongTo == CharacterType.PlayerL || card.BelongTo == CharacterType.PlayerR)
+			{
 				transform.localPosition -= Vector3.up * 15 * index;
+				//if(isSelected)
+				//{
+				//	if(card.BelongTo == CharacterType.PlayerL)
+				//		transform.localPosition += Vector3.right * 10;
+				//	else if(card.BelongTo == CharacterType.PlayerR)
+				//		transform.localPosition -= Vector3.right * 10;
+				//}
+			}
 		}
 
 	}
