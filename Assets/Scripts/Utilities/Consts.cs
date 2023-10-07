@@ -2,25 +2,37 @@ using UnityEngine;
 
 namespace Game
 {
+	/// <summary> 游戏所需的常量 </summary>
 	public class Consts
 	{
-		/// <summary>
-		/// 游戏数据的路径
-		/// </summary>
+		/// <summary> 游戏数据的路径 </summary>
 		public static readonly string DataPath = Application.persistentDataPath+@"\data.xml";
 	}
 
-	/// <summary>
-	/// UI 面板的类型
-	/// </summary>
+	/// <summary> View 的事件类型 </summary>
+	public enum ViewEvent
+	{
+		QUIT_GAME = -63,
+		START_GAME = -1,
+		TEST = 0,
+	}
+
+	/// <summary> 命令事件类型 </summary>
+	public enum CommandEvent
+	{
+		QuitGame = -63,
+		StartGame = -1,
+		TEST = 0,
+	}
+
+	/// <summary> UI 面板的类型 </summary>
 	public enum PanelType
 	{
+		StartPanel,
 
 	}
 
-	/// <summary>
-	/// 角色类型
-	/// </summary>
+	/// <summary> 角色类型 </summary>
 	public enum CharacterType
 	{
 		Library = 0,
@@ -30,21 +42,17 @@ namespace Game
 		Desk
 	}
 
-	/// <summary>
-	/// 花色
-	/// </summary>
+	/// <summary> 花色 </summary>
 	public enum Colours
 	{
 		None,
 		Club,//梅花
 		Heart,//红桃
 		Spade,//黑桃
-		Diamond//方片
+		Square//方片
 	}
 
-	/// <summary>
-	/// 卡牌权重
-	/// </summary>
+	/// <summary> 卡牌权重 </summary>
 	public enum Weight
 	{
 		Three,
@@ -64,9 +72,7 @@ namespace Game
 		RedJoker
 	}
 
-	/// <summary>
-	/// 出牌类型
-	/// </summary>
+	/// <summary> 出牌类型 </summary>
 	public enum CardType
 	{
 		None,

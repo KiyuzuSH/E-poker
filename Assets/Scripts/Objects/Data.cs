@@ -1,11 +1,7 @@
-using System;
-
 namespace Game
 {
-	/// <summary>
-	/// 数据类
-	/// </summary>
-	[Serializable]
+	/// <summary> 数据类 </summary>
+	[System.Serializable]
 	public class Data
 	{
 

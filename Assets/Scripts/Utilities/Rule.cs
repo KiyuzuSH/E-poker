@@ -2,26 +2,20 @@ using System.Collections.Generic;
 
 namespace Game
 {
-	/// <summary>
-	/// 游戏规则
-	/// </summary>
+	/// <summary> 游戏规则 </summary>
 	public class Rule
 	{
-		/// <summary>
-		/// 单张?
-		/// </summary>
-		/// <param name="Cards">选择的手牌</param>
-		/// <returns>bool</returns>
+		/// <summary> 单张? </summary>
+		/// <param name="Cards"> 选择的手牌 </param>
+		/// <returns> bool </returns>
 		public static bool IsSingle(List<Card> cards)
 		{
 			return cards.Count == 1;
 		}
 
-		/// <summary>
-		/// 对子?
-		/// </summary>
-		/// <param name="cards">选择的手牌</param>
-		/// <returns>bool</returns>
+		/// <summary> 对子? </summary>
+		/// <param name="cards"> 选择的手牌 </param>
+		/// <returns> bool </returns>
 		public static bool IsDouble(List<Card> cards)
 		{
 			if(cards.Count == 2)
@@ -30,11 +24,9 @@ namespace Game
 			return false;
 		}
 
-		/// <summary>
-		/// 顺子?
-		/// </summary>
-		/// <param name="cards">选择的手牌</param>
-		/// <returns>bool</returns>
+		/// <summary> 顺子? </summary>
+		/// <param name="cards"> 选择的手牌 </param>
+		/// <returns> bool </returns>
 		public static bool IsStraight(List<Card> cards)
 		{
 			if(cards.Count < 5 || cards.Count > 12)
@@ -48,11 +40,9 @@ namespace Game
 			return true;
 		}
 
-		/// <summary>
-		/// 姐妹花?
-		/// </summary>
-		/// <param name="cards">选择的手牌</param>
-		/// <returns>bool</returns>
+		/// <summary> 姐妹花? </summary>
+		/// <param name="cards"> 选择的手牌 </param>
+		/// <returns> bool </returns>
 		public static bool IsDoubleStraight(List<Card> cards)
 		{
 			if(cards.Count < 6 || cards.Count % 2 != 0) return false;
@@ -65,11 +55,9 @@ namespace Game
 			return true;
 		}
 
-		/// <summary>
-		/// 三张顺子?
-		/// </summary>
-		/// <param name="cards">选择的手牌</param>
-		/// <returns>bool</returns>
+		/// <summary> 三张顺子? </summary>
+		/// <param name="cards"> 选择的手牌 </param>
+		/// <returns> bool </returns>
 		public static bool IsTripleStraight(List<Card> cards)
 		{
 			if(cards.Count < 6 || cards.Count % 3 != 0) return false;
@@ -83,11 +71,9 @@ namespace Game
 			return true;
 		}
 
-		/// <summary>
-		/// 三张(飞机)?
-		/// </summary>
-		/// <param name="cards">选择的手牌</param>
-		/// <returns>bool</returns>
+		/// <summary> 三张(飞机)? </summary>
+		/// <param name="cards"> 选择的手牌 </param>
+		/// <returns> bool </returns>
 		public static bool IsThree(List<Card> cards)
 		{
 			if(cards.Count != 3) return false;
@@ -97,11 +83,9 @@ namespace Game
 			return true;
 		}
 
-		/// <summary>
-		/// 三带一?
-		/// </summary>
-		/// <param name="cards">选择的手牌</param>
-		/// <returns>bool</returns>
+		/// <summary> 三带一? </summary>
+		/// <param name="cards"> 选择的手牌 </param>
+		/// <returns> bool </returns>
 		public static bool IsThreeOne(List<Card> cards)
 		{
 			if(cards.Count != 4) return false;
@@ -110,11 +94,9 @@ namespace Game
 			return false;
 		}
 
-		/// <summary>
-		/// 三带二?
-		/// </summary>
-		/// <param name="cards">选择的手牌</param>
-		/// <returns>bool</returns>
+		/// <summary> 三带二? </summary>
+		/// <param name="cards"> 选择的手牌 </param>
+		/// <returns> bool </returns>
 		public static bool IsThreeTwo(List<Card> cards)
 		{
 			if(cards.Count != 5) return false;
@@ -130,11 +112,9 @@ namespace Game
 			return false;
 		}
 
-		/// <summary>
-		/// 炸弹?
-		/// </summary>
-		/// <param name="cards">选择的手牌</param>
-		/// <returns>bool</returns>
+		/// <summary> 炸弹? </summary>
+		/// <param name="cards"> 选择的手牌 </param>
+		/// <returns> bool </returns>
 		public static bool IsBomb(List<Card> cards)
 		{
 			if(cards.Count != 4) return false;
@@ -144,11 +124,9 @@ namespace Game
 			return true;
 		}
 
-		/// <summary>
-		/// 王炸?
-		/// </summary>
-		/// <param name="cards">选择的手牌</param>
-		/// <returns>bool</returns>
+		/// <summary> 王炸? </summary>
+		/// <param name="cards"> 选择的手牌 </param>
+		/// <returns> bool </returns>
 		public static bool IsJokerBomb(List<Card> cards)
 		{
 			if(cards.Count != 2) return false;
@@ -157,12 +135,10 @@ namespace Game
 			return false;
 		}
 
-		/// <summary>
-		/// 能否出牌?
-		/// </summary>
-		/// <param name="cards">手牌</param>
-		/// <param name="type">出牌类型</param>
-		/// <returns>能否出牌</returns>
+		/// <summary> 能否出牌? </summary>
+		/// <param name="cards"> 手牌 </param>
+		/// <param name="type"> 出牌类型 </param>
+		/// <returns> bool->能否出牌 </returns>
 		public static bool CanPop(List<Card> cards, out CardType type)
 		{
 			type = CardType.None;
