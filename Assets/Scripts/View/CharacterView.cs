@@ -4,9 +4,9 @@ namespace Game
 {
 	public class CharacterView : View
 	{
-		public PlayerControl Player1;
-		public PlayerControl Player2;
-		public PlayerControl Player3;
+		public PlayerControl PlayerC;
+		public ComputerControl PlayerL;
+		public ComputerControl PlayerR;
 		public DeskControl Desk;
 
 		/// <summary> 添加卡牌 </summary>
@@ -18,13 +18,13 @@ namespace Game
 			switch (cType)
 			{
 				case CharacterType.PlayerC:
-					Player1.AddCard(card, selected);
+					PlayerC.AddCard(card, selected);
 					break;
 				case CharacterType.PlayerL:
-					Player2.AddCard(card, selected);
+					PlayerL.AddCard(card, selected);
 					break;
 				case CharacterType.PlayerR:
-					Player3.AddCard(card, selected);
+					PlayerR.AddCard(card, selected);
 					break;
 				case CharacterType.Desk:
 					Desk.AddCard(card, selected);
@@ -33,9 +33,6 @@ namespace Game
 					break;
 			}
 		}
-
-		// 如有需要清空桌面 造一个方法，内部写Desk.Clear();
-
 	}
 
 }

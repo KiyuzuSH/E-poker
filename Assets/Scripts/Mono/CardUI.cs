@@ -1,5 +1,4 @@
 using ObjPool;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -100,14 +99,7 @@ namespace Game
 			}
 			else if(card.BelongTo == CharacterType.PlayerL || card.BelongTo == CharacterType.PlayerR)
 			{
-				transform.localPosition -= Vector3.up * 15 * index;
-				//if(isSelected)
-				//{
-				//	if(card.BelongTo == CharacterType.PlayerL)
-				//		transform.localPosition += Vector3.right * 10;
-				//	else if(card.BelongTo == CharacterType.PlayerR)
-				//		transform.localPosition -= Vector3.right * 10;
-				//}
+				transform.localPosition = Vector3.up * -15 * index;
 			}
 		}
 

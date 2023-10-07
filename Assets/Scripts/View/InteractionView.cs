@@ -26,11 +26,12 @@ namespace Game
 		}
 
 		/// <summary> ³öÅÆ </summary>
-		public void ActivePlay()
+		public void ActivePlay(bool canPass = true)
 		{
 			btn_Deal.gameObject.SetActive(false);
 			btn_Play.gameObject.SetActive(true);
 			btn_Pass.gameObject.SetActive(true);
+			btn_Pass.interactable = canPass;
 		}
 	}
 }

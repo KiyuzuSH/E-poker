@@ -42,6 +42,7 @@ namespace Game
 				yield return new WaitForEndOfFrame();
 			}
 
+
 			// 发牌结束通知
 			dispatcher.Dispatch(ViewEvent.COMPLETE_DEAL);
 		}

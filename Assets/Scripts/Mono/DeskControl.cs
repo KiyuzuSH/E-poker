@@ -32,7 +32,7 @@ namespace Game
 		{
 			CardList.Clear();
 
-			CardUI[] cards = transform.Find("CreatePoint").GetComponentsInChildren<CardUI>();
+			CardUI[] cards = transform.Find("CardCreatePoint").GetComponentsInChildren<CardUI>();
 			for(int i = 0; i < cards.Length; i++)
 				cards [i].Destroy();
 		}

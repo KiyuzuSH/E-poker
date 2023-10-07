@@ -1,6 +1,4 @@
 using System;
-using System.Transactions;
-using UnityEngine.UI;
 
 namespace Game
 {
@@ -8,11 +6,11 @@ namespace Game
 	public class RoundModel
 	{
 		/// <summary> 玩家出牌事件 </summary>
-		public static Action PlayerHandler;
+		public static event Action<bool> PlayerHandler;
 
 		/// <summary> 他人出牌事件 </summary>
-		public static Action OthersHandler;
-		
+		public static event Action<ComputerSmartArgs> OthersHandler;
+
 		private CharacterType biggestCharacter;
 		private CharacterType currentCharacter;
 
@@ -87,19 +85,29 @@ namespace Game
 
 		/// <summary> 开始出牌 </summary>
 		/// <param name="cType"> 谁 </param>
-		private static void BeginWith(CharacterType cType)
+		private void BeginWith(CharacterType cType)
 		{
 			if(cType == CharacterType.PlayerC)
 			{
-				//玩家出牌
+				// 玩家出牌
 				if(PlayerHandler != null)
-					PlayerHandler();
+					PlayerHandler(biggestCharacter != CharacterType.PlayerC);
 			}
 			else
 			{
-				//等人出牌
+				// 等人出牌
 				if(OthersHandler != null)
-					OthersHandler();
+				{
+					ComputerSmartArgs e = new ComputerSmartArgs()
+					{
+						Biggest = this.Biggest,
+						CardType = this.CardType,
+						CharacterType = this.Current,
+						Length = this.Length,
+						Weight = this.Weight
+					};
+					OthersHandler(e);
+				}
 			}
 		}
 	}

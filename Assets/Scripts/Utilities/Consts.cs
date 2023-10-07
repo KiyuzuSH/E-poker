@@ -13,19 +13,28 @@ namespace Game
 	public enum ViewEvent
 	{
 		QUIT_GAME = -63,
+		RESTART_GAME = -2,
 		START_GAME = -1,
-		TEST = 0,
-		COMPLETE_DEAL = 1,
+		//TEST = 0,
+		COMPLETE_DEAL = 2,
+		REQUEST_PLAY = 3,
+		SUCCESS_PLAY = 4,
+		COMPLETE_PLAY = 5,
+		//GAME_OVER = 127,
 	}
 
 	/// <summary> 命令事件类型 </summary>
 	public enum CommandEvent
 	{
 		QuitGame = -63,
+		RestartGame = -2,
 		StartGame = -1,
-		Test = 0,
+		//Test = 0,
 		RequestDeal = 1,
 		DealCard = 2,
+		PlayCard = 3,
+		PassCard = 6,
+		GameOver = 127,
 	}
 
 	/// <summary> UI 面板的类型 </summary>
@@ -42,8 +51,8 @@ namespace Game
 	{
 		Library = 0,	// 牌库
 		PlayerC = 1,	// 主视角
-		PlayerL = 2,	// 左边
-		PlayerR = 3,	// 右边
+		PlayerR = 2,	// 左边
+		PlayerL = 3,	// 右边
 		Desk			// 牌桌
 	}
 

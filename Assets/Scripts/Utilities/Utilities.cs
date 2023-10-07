@@ -36,7 +36,7 @@ namespace Game
 			else
 			{
 				GameObject panel = Object.Instantiate<GameObject>(prefab);
-				panel.name = panelType.ToString();	// delete (Clone)
+				panel.name = panelType.ToString();  // delete (Clone)
 				panel.transform.SetParent(UIRoot, false);
 				return panel;
 			}
@@ -85,6 +85,31 @@ namespace Game
 						return -a.CardWeight.CompareTo(b.CardWeight);
 				}
 				);
+		}
+
+		public static int GetWeight(List<Card> cards, CardType cardType)
+		{
+			int totalWeight= 0;
+			if(cardType == CardType.ThreeOne || cardType == CardType.ThreeTwo)
+			{
+				for(int i = 0; i < cards.Count; i++)
+				{
+					if(cards [i].CardWeight == cards [i + 1].CardWeight && cards [i + 1].CardWeight == cards [i + 2].CardWeight)
+					{
+						totalWeight += (int)cards [i].CardWeight;
+						totalWeight *= 3;
+						break;
+					}
+				}
+			}
+			else
+			{
+				for(int i = 0; i < cards.Count; i++)
+				{
+					totalWeight += (int)cards [i].CardWeight;
+				}
+			}
+			return totalWeight;
 		}
 	}
 }

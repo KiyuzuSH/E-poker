@@ -15,4 +15,4 @@ MonoBehaviour:
   PoolList:
   - Name: Card
     Prefab: {fileID: 372581314887251598, guid: 3a087f535742b404b9409fd7f4c97e06, type: 3}
-    MaxCount: 54
+    MaxCount: 128

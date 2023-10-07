@@ -21,6 +21,8 @@ namespace Game
 			commandBinder.Bind(CommandEvent.StartGame).To<StartButtonCommand>();
 			commandBinder.Bind(CommandEvent.QuitGame).To<QuitButtonCommand>();
 			commandBinder.Bind(CommandEvent.RequestDeal).To<RequestDealCommand>();
+			commandBinder.Bind(CommandEvent.PlayCard).To<PlayCardCommand>();
+			commandBinder.Bind(CommandEvent.PassCard).To<PassCardCommand>();
 
 			commandBinder.Bind(ContextEvent.START).To<StartCommand>().Once();
 		}

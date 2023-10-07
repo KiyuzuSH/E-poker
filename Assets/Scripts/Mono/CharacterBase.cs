@@ -83,7 +83,7 @@ namespace Game
 
 		/// <summary> ÅÅÐò¿¨ÅÆµÄUI </summary>
 		/// <param name="cards"> ÓÐÐòÐòÁÐ </param>
-		private void SortCardUI(List<Card> cards)
+		public void SortCardUI(List<Card> cards)
 		{
 			CardUI[] cardUIs = CreatePoint.GetComponentsInChildren<CardUI>();
 
