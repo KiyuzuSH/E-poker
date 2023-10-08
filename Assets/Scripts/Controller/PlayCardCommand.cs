@@ -23,7 +23,7 @@ namespace Game
 					dispatcher.Dispatch(ViewEvent.SUCCESS_PLAY);
 				else
 				{
-					UnityEngine.Debug.LogWarning("Illegal Play!");
+					UnityEngine.Debug.LogWarning("·Ç·¨³öÅÆ!");
 					return;
 				}
 			}

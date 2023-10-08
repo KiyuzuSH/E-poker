@@ -70,14 +70,14 @@ namespace Game
 						currType = CardType.JokerBomb;
 					}
 					break;
-				case CardType.Three:
-					selectCards = FindThree(cards, weight);
+				case CardType.ThreeTwo:
+					selectCards = FindThreeAndTwo(cards, weight);
 					break;
 				case CardType.ThreeOne:
 					selectCards = FindThreeAndOne(cards, weight);
 					break;
-				case CardType.ThreeTwo:
-					selectCards = FindThreeAndTwo(cards, weight);
+				case CardType.Three:
+					selectCards = FindThree(cards, weight);
 					break;
 				case CardType.Bomb:
 					selectCards = FindBoom(cards, weight);
@@ -104,7 +104,7 @@ namespace Game
 			// œ»≥ˆÀ≥◊”
 			for(int i = 12; i >= 5; i--)
 			{
-				select = FindStraight(cards, -1, i - 1);
+				select = FindStraight(cards, -1, i);
 				if(select.Count != 0)
 				{
 					currType = CardType.Straight;
@@ -212,7 +212,7 @@ namespace Game
 		private List<Card> FindStraight(List<Card> cards, int minWeight, int length)
 		{
 			List<Card> select = new List<Card>();
-			int counter = 1;
+			int counter = 0;
 			List<int> indexList = new List<int>();
 			for(int i = 0; i < cards.Count - 4; i++)
 			{
@@ -376,7 +376,7 @@ namespace Game
 				}
 			}
 
-			return three;
+			return select;
 		}
 
 		/// <summary> ’“’®µØ </summary>

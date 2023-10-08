@@ -94,6 +94,7 @@ namespace Game
 				}
 			}
 			SortCardUI(CardList);
+			characterUI.SetRemain(CardCount);
 		}
 
 		/// <summary>

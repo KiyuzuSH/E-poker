@@ -66,7 +66,8 @@ namespace Game
 					CardList.Remove(tempCard [i]);
 				}
 			}
-			this.Sort(false);
+			this.SortCardUI(CardList);
+			characterUI.SetRemain(CardCount);
 		}
 	}
 }

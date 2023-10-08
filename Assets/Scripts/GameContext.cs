@@ -23,6 +23,7 @@ namespace Game
 			commandBinder.Bind(CommandEvent.RequestDeal).To<RequestDealCommand>();
 			commandBinder.Bind(CommandEvent.PlayCard).To<PlayCardCommand>();
 			commandBinder.Bind(CommandEvent.PassCard).To<PassCardCommand>();
+			commandBinder.Bind(CommandEvent.GameOver).To<GameOverCommand>();
 
 			commandBinder.Bind(ContextEvent.START).To<StartCommand>().Once();
 		}

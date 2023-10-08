@@ -2,7 +2,6 @@ using strange.extensions.dispatcher.eventdispatcher.api;
 using strange.extensions.mediation.impl;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace Game
@@ -17,6 +16,7 @@ namespace Game
 			dispatcher.AddListener(ViewEvent.COMPLETE_DEAL, onCompleteDeal);
 			dispatcher.AddListener(ViewEvent.REQUEST_PLAY, onPlayerPlayCard);
 			dispatcher.AddListener(ViewEvent.SUCCESS_PLAY, onPlaySuccessPlay);
+			dispatcher.AddListener(ViewEvent.RESTART_GAME, onRestartGame);
 
 			RoundModel.OthersHandler += RoundModel_OthersHandler;
 		}
@@ -27,11 +27,19 @@ namespace Game
 			dispatcher.RemoveListener(ViewEvent.COMPLETE_DEAL, onCompleteDeal);
 			dispatcher.RemoveListener(ViewEvent.REQUEST_PLAY, onPlayerPlayCard);
 			dispatcher.RemoveListener(ViewEvent.SUCCESS_PLAY, onPlaySuccessPlay);
+			dispatcher.RemoveListener(ViewEvent.RESTART_GAME, onRestartGame);
 
 			RoundModel.OthersHandler -= RoundModel_OthersHandler;
 		}
 
 		#region 回调函数
+
+		private void onRestartGame()
+		{
+			CharacterView.PlayerC.CardList.Clear();
+			CharacterView.PlayerL.CardList.Clear();
+			CharacterView.PlayerR.CardList.Clear();
+		}
 
 		/// <summary> 电脑自动出牌 </summary>
 		/// <param name="e"> 数据 </param>
@@ -137,12 +145,13 @@ namespace Game
 		private void onCompleteDeal(IEvent payload)
 		{
 			CharacterView.PlayerC.Sort();
+			CharacterView.Desk.Sort(true);
 			CharacterView.PlayerL.Sort();
 			CharacterView.PlayerR.Sort();
-			CharacterView.Desk.Sort(true);
+			
 		}
 
-		private void onPlayerPlayCard(IEvent evt)
+		private void onPlayerPlayCard()
 		{
 			List<Card> cardList = CharacterView.PlayerC.FindSelectedCard();
 			CardType cardType;
@@ -161,7 +170,7 @@ namespace Game
 			}
 			else
 			{
-				UnityEngine.Debug.LogWarning("Choose Right Ones!");
+				Debug.LogWarning("请出有效的牌型!");
 			}
 		}
 
@@ -183,6 +192,7 @@ namespace Game
 					PlayerLWin = false,
 					PlayerCWin = true,
 				};
+				dispatcher.Dispatch(ViewEvent.GAME_OVER);
 				dispatcher.Dispatch(CommandEvent.GameOver, g);
 			}
 			else

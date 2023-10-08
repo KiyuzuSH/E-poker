@@ -15,9 +15,12 @@ namespace Game
 			InteractionView.btn_Deal.onClick.AddListener(onDealClick);
 			InteractionView.btn_Play.onClick.AddListener(onPlayClick);
 			InteractionView.btn_Pass.onClick.AddListener(onPassClick);
+			
 
 			dispatcher.AddListener(ViewEvent.COMPLETE_DEAL, onCompleteDeal);
 			dispatcher.AddListener(ViewEvent.COMPLETE_PLAY, onCompletePlay);
+			dispatcher.AddListener(ViewEvent.RESTART_GAME, onRestartGame);
+			dispatcher.AddListener(ViewEvent.GAME_OVER, onGameOver);
 
 			// ×¢²á¾²Ì¬ÊÂ¼þ
 			RoundModel.PlayerHandler += ActiveButton;
@@ -31,6 +34,8 @@ namespace Game
 
 			dispatcher.RemoveListener(ViewEvent.COMPLETE_DEAL, onCompleteDeal);
 			dispatcher.RemoveListener(ViewEvent.COMPLETE_PLAY, onCompletePlay);
+			dispatcher.RemoveListener(ViewEvent.RESTART_GAME, onRestartGame);
+			dispatcher.RemoveListener(ViewEvent.GAME_OVER, onGameOver);
 
 			RoundModel.PlayerHandler -= ActiveButton;
 		}
@@ -67,6 +72,17 @@ namespace Game
 		{
 			dispatcher.Dispatch(CommandEvent.PassCard);
 			InteractionView.DeactiveAll();
+		}
+
+		private void onGameOver()
+		{
+			InteractionView.DeactiveAll();
+		}
+
+		private void onRestartGame()
+		{
+			InteractionView.DeactiveAll();
+			InteractionView.ActiveDeal();
 		}
 
 		private void onCompletePlay()

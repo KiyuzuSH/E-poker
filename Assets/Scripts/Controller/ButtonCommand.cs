@@ -8,7 +8,6 @@ namespace Game
 	{
 		public override void Execute()
 		{
-			Debug.Log("Run");
 			Utilities.CreateUIPanel(PanelType.Background);
 			Utilities.CreateUIPanel(PanelType.Character);
 			Utilities.CreateUIPanel(PanelType.Interaction);
@@ -20,6 +19,7 @@ namespace Game
 	{
 		public override void Execute()
 		{
+			Debug.LogWarning("Program will QUIT if it's not DEBUG mode. ");
 			Application.Quit();
 		}
 	}

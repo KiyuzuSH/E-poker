@@ -13,6 +13,7 @@ namespace Game
 	public enum ViewEvent
 	{
 		QUIT_GAME = -63,
+		GAME_OVER = -62,
 		RESTART_GAME = -2,
 		START_GAME = -1,
 		//TEST = 0,
@@ -20,13 +21,13 @@ namespace Game
 		REQUEST_PLAY = 3,
 		SUCCESS_PLAY = 4,
 		COMPLETE_PLAY = 5,
-		//GAME_OVER = 127,
 	}
 
 	/// <summary> 命令事件类型 </summary>
 	public enum CommandEvent
 	{
 		QuitGame = -63,
+		GameOver = -62,
 		RestartGame = -2,
 		StartGame = -1,
 		//Test = 0,
@@ -34,7 +35,6 @@ namespace Game
 		DealCard = 2,
 		PlayCard = 3,
 		PassCard = 6,
-		GameOver = 127,
 	}
 
 	/// <summary> UI 面板的类型 </summary>
@@ -44,6 +44,7 @@ namespace Game
 		Background,
 		Character,
 		Interaction,
+		GameOver,
 	}
 
 	/// <summary> 角色类型 </summary>
