@@ -94,12 +94,12 @@ namespace Game
 			// ср╠ъ
 			if(card.BelongTo == CharacterType.Desk || card.BelongTo == CharacterType.PlayerC)
 			{
-				transform.localPosition = Vector3.right * 25 * index;
+				transform.localPosition = Vector3.right * 35 * index;
 				if(isSelected) transform.localPosition += Vector3.up * 10;
 			}
 			else if(card.BelongTo == CharacterType.PlayerL || card.BelongTo == CharacterType.PlayerR)
 			{
-				transform.localPosition = Vector3.up * -15 * index;
+				transform.localPosition = Vector3.up * -25 * index;
 			}
 		}
 

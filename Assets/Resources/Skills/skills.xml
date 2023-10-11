@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<skills>
+    <skill>
+        <name>Joker卡阔以</name>
+        <id>1</id>
+        <price>3</price>
+        <class>draw buff</class>
+        <description>摸牌阶段，必定摸到一张大王(不受减益效果改变)，且单张大王或小王可以当做5炸打出。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>两级反转</name>
+        <id>2</id>
+        <price>3</price>
+        <class>draw buff</class>
+        <description>摸牌阶段，至少获得两张3，摸牌结束后摸到的所有3都变成2。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>无尽战神，出来！</name>
+        <id>3</id>
+        <price>3</price>
+        <class>draw buff</class>
+        <description>摸牌结束后，将手牌中10的数量增加到7张（突破手牌上限且无法被减益影响）。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>我的原子弹回来了！</name>
+        <id>4</id>
+        <price>3</price>
+        <class>draw buff</class>
+        <description>摸牌阶段，至少获得一个炸弹，且手牌中所有炸弹都可以作为王炸打出。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>狂野荧屏巴洛克</name>
+        <id>5</id>
+        <price>3</price>
+        <class>draw buff</class>
+        <description>摸牌阶段至少获得两张7，一张9，摸牌结束后7和9的数量翻倍（突破手牌上限）。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>我是那迫近的狂风</name>
+        <id>6</id>
+        <price>3</price>
+        <class>draw buff</class>
+        <description>摸牌结束后，手牌中点数最小的4张牌变成A。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>我22呢</name>
+        <id>7</id>
+        <price>2</price>
+        <class>draw buff</class>
+        <description>摸牌阶段，手牌中至少存在两张2（不受减益影响）。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>国王游戏</name>
+        <id>8</id>
+        <price>2</price>
+        <class>draw buff</class>
+        <description>摸牌阶段，手牌中J和Q至少为1张，K的数量至少为2张。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>冲！冲刺！</name>
+        <id>9</id>
+        <price>2</price>
+        <class>draw buff</class>
+        <description>摸牌阶段，手牌中一定存在345678的顺子。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>有1吗</name>
+        <id>10</id>
+        <price>2</price>
+        <class>draw buff</class>
+        <description>摸牌阶段，手牌中A的数量必定为3（不受减益影响）。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>小心夹脚</name>
+        <id>11</id>
+        <price>2</price>
+        <class>draw buff</class>
+        <description>摸牌阶段，至少获得一张J，摸牌结束后J的数量翻倍（最高为6张J，突破手牌上限）。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>钛金手机</name>
+        <id>12</id>
+        <price>2</price>
+        <class>draw buff</class>
+        <description>摸牌阶段，手牌中一定存在8848这四张牌。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>中庸之道</name>
+        <id>13</id>
+        <price>1</price>
+        <class>draw buff</class>
+        <description>摸牌阶段，手牌中必定没有3和2这两种牌。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>我和他55开</name>
+        <id>14</id>
+        <price>1</price>
+        <class>draw buff</class>
+        <description>选择一位对手，摸牌结束后，复制他的手牌为自己的手牌。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>贵州和广西相比</name>
+        <id>15</id>
+        <price>1</price>
+        <class>draw buff</class>
+        <description>摸牌阶段，必定获得5，2，4，5这四张牌。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>一次加4个</name>
+        <id>16</id>
+        <price>1</price>
+        <class>draw buff</class>
+        <description>摸牌结束后，随机再摸取4张牌。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>狂赌之渊</name>
+        <id>17</id>
+        <price>1</price>
+        <class>draw buff</class>
+        <description>摸牌结束后，若手牌中存在大王/小王，则额外获得一张小王/大王；否则手牌中最大的4张牌重新在3~10的范围内重新随机。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>欧布圆环</name>
+        <id>18</id>
+        <price>1</price>
+        <class>draw buff</class>
+        <description>摸牌结束后，另外两名玩家手牌中点数第三大的牌各复制一份加入到自己的手牌中（突破手牌上限）。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>就喜欢小的</name>
+        <id>19</id>
+        <price>3</price>
+        <class>draw debuff</class>
+        <description>摸牌结束后，除自己之外的两位玩家点数最高的6张牌在3~10的范围内重新随。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>战争迷雾</name>
+        <id>20</id>
+        <price>3</price>
+        <class>draw debuff</class>
+        <description>摸牌结束后，除自己之外的两位玩家会有5张不可视牌（点数未知且无法打出），持续两个回合。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>乱糟糟</name>
+        <id>21</id>
+        <price>3</price>
+        <class>draw debuff</class>
+        <description>摸牌结束后，除自己之外的两位玩家手牌排序为乱序。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>不行！</name>
+        <id>22</id>
+        <price>3</price>
+        <class>draw debuff</class>
+        <description>摸牌阶段前，限制一名玩家，在摸牌阶段无法抽取比Q更大的牌。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>黄金回旋</name>
+        <id>23</id>
+        <price>3</price>
+        <class>draw debuff</class>
+        <description>摸牌结束后，除你之外的两名玩家手牌中随机3张牌变为不可使用状态（无法打出）并且在3回合后消失。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>哥谭救星</name>
+        <id>24</id>
+        <price>3</price>
+        <class>draw debuff</class>
+        <description>摸牌结束后，移除除你以外的两名玩家手中的大小王。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>以小博大</name>
+        <id>25</id>
+        <price>2</price>
+        <class>draw debuff</class>
+        <description>选择一名玩家，摸牌结束后将你点数最小的3张牌和他除大小王外点数最大的3张牌交换。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>造个小飞机</name>
+        <id>26</id>
+        <price>2</price>
+        <class>draw debuff</class>
+        <description>选择一名玩家，摸牌结束后将他除大小王以外点数最大的3张牌都变成3。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>和平协议</name>
+        <id>27</id>
+        <price>2</price>
+        <class>draw debuff</class>
+        <description>抽牌结束后，除你以外的两名玩家手牌中若存在炸弹（王炸除外），则随机将其中一个炸弹变为飞机。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>你即是我，我即是你</name>
+        <id>28</id>
+        <price>2</price>
+        <class>draw debuff</class>
+        <description>选择一名玩家，摸牌结束后交换你和他的手牌。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>双重火箭飞拳</name>
+        <id>29</id>
+        <price>2</price>
+        <class>draw debuff</class>
+        <description>摸牌结束后，炸毁除你以外两名玩家手中随机的一张牌。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>v我50</name>
+        <id>30</id>
+        <price>2</price>
+        <class>draw debuff</class>
+        <description>摸牌结束后，除你以外的两名玩家丢弃一张5和一张10（没有则无视）。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>都别活</name>
+        <id>31</id>
+        <price>1</price>
+        <class>draw debuff</class>
+        <description>摸牌阶段，所有人的手牌都只会从3~K中进行随机。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>魔术戏法</name>
+        <id>32</id>
+        <price>1</price>
+        <class>draw debuff</class>
+        <description>摸牌结束后，所有人的手牌中最大的两张牌变成一个单张3。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>禁飞区</name>
+        <id>33</id>
+        <price>1</price>
+        <class>draw debuff</class>
+        <description>摸牌结束后，所有人手牌中的飞机减去其中1张变为对子。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>玩神秘的</name>
+        <id>34</id>
+        <price>1</price>
+        <class>draw debuff</class>
+        <description>摸牌结束后，所有人都无法看见其他人剩余牌量。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>颠倒魔法</name>
+        <id>35</id>
+        <price>1</price>
+        <class>draw debuff</class>
+        <description>摸牌结束后，所有人的手牌除了（大小王），点数颠倒。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>能吃是福</name>
+        <id>36</id>
+        <price>1</price>
+        <class>draw debuff</class>
+        <description>摸牌结束后，除你以外的两名玩家额外在3~10中随机抽取5张【突破18张上限】。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>majiang soul</name>
+        <id>37</id>
+        <price>3</price>
+        <class>play buff</class>
+        <description>游玩阶段，除你之外两人打出单张牌时可以进行碰、杠操作，组成飞机或炸弹，限定一次。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>逆转裁判</name>
+        <id>38</id>
+        <price>3</price>
+        <class>play buff</class>
+        <description>游玩阶段，将下一回合中其他玩家优先出牌变成自己优先出牌，限定一次。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>无懈可击</name>
+        <id>39</id>
+        <price>3</price>
+        <class>play buff</class>
+        <description>游玩阶段，可选择一名玩家禁止他在这一轮次中出牌。限定2次。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>杀手皇后</name>
+        <id>40</id>
+        <price>3</price>
+        <class>play buff</class>
+        <description>游玩阶段，可以将自己这一轮次中自己打出的手牌重新收回到手牌中，限定一次。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>幕后黑手</name>
+        <id>41</id>
+        <price>3</price>
+        <class>play buff</class>
+        <description>游玩阶段，若累积出现4个炸弹，则判定你获胜。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>土豆雷</name>
+        <id>42</id>
+        <price>3</price>
+        <class>play buff</class>
+        <description>摸牌结束后，可以选择任意一张牌作为种子，该牌5回合内不可使用，5回合后该牌变成相应点数的炸弹。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>奥特赛文</name>
+        <id>43</id>
+        <price>2</price>
+        <class>play buff</class>
+        <description>游玩阶段，手牌中的7可以视作除大小王以外的任意牌打出。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>看看你的</name>
+        <id>44</id>
+        <price>2</price>
+        <class>play buff</class>
+        <description>游玩阶段，你能看见另外两名玩家中点数最大的两张牌。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>替身战斗</name>
+        <id>45</id>
+        <price>2</price>
+        <class>play buff</class>
+        <description>游戏开始时，指定一名玩家作为你的替身，若他最终获胜则自己的胜场同样+1。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>爆了！ALL IN！</name>
+        <id>46</id>
+        <price>2</price>
+        <class>play buff</class>
+        <description>游玩阶段，当你打出炸弹时，能够额外附带两张任意的牌。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>犹豫就会败北</name>
+        <id>47</id>
+        <price>2</price>
+        <class>play buff</class>
+        <description>游玩阶段，除自己以外的两名玩家若没有在5s内出牌则跳过该出牌轮次。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>永恒遥远的胜利之剑</name>
+        <id>48</id>
+        <price>2</price>
+        <class>play buff</class>
+        <description>游玩阶段，手牌中的三顺和双顺可以当做炸弹打出，点数对应打出牌中最高点。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>平砍带顺劈</name>
+        <id>49</id>
+        <price>1</price>
+        <class>play buff</class>
+        <description>游玩阶段，自己打出单张牌时，可以附带另一张单张牌，按点数大的单张计算，限定2次。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>小开不算开</name>
+        <id>50</id>
+        <price>1</price>
+        <class>play buff</class>
+        <description>游玩阶段，你可以将4种不同点数的牌组合起来作为一个炸弹，按点数最小的牌计算。使用后三个轮次将无法出牌。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>纯捡垃圾吃的</name>
+        <id>51</id>
+        <price>1</price>
+        <class>play buff</class>
+        <description>游玩阶段，你能够从所有人打出的牌堆中收回除大小王以外的任意一张牌。使用后跳过这一回合的后续轮次以及下一个回合。</description>
+        <range>self</range>
+    </skill>
+    <skill>
+        <name>不稳定空间</name>
+        <id>52</id>
+        <price>1</price>
+        <class>play buff</class>
+        <description>游玩阶段，会在随机轮次进入不稳定空间，所有人在本轮次中无法出牌，直接按当前牌面结算并进入下一回合。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>劣质炸弹</name>
+        <id>53</id>
+        <price>1</price>
+        <class>play buff</class>
+        <description>游玩阶段，打出炸弹的玩家有几率下一个轮次无法出牌。</description>
+        <range>global</range>
+    </skill>
+    <skill>
+        <name>开摆！</name>
+        <id>54</id>
+        <price>1</price>
+        <class>play buff</class>
+        <description>摸牌结束后，无法打出任何的牌，默认跳过所有轮次。如果在7个回合后没有结束游戏，则判定你获胜。</description>
+        <range>self</range>
+    </skill>
+</skills>
