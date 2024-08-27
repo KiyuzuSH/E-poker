@@ -2,6 +2,7 @@ using strange.extensions.dispatcher.eventdispatcher.api;
 using strange.extensions.mediation.impl;
 using System.Collections;
 using System.Collections.Generic;
+using Game.Args;
 using UnityEngine;
 
 namespace Game
@@ -32,7 +33,7 @@ namespace Game
 			RoundModel.OthersHandler -= RoundModel_OthersHandler;
 		}
 
-		#region »Øµ÷º¯Êı
+		#region å›è°ƒå‡½æ•°
 
 		private void onRestartGame()
 		{
@@ -41,15 +42,15 @@ namespace Game
 			CharacterView.PlayerR.CardList.Clear();
 		}
 
-		/// <summary> µçÄÔ×Ô¶¯³öÅÆ </summary>
-		/// <param name="e"> Êı¾İ </param>
+		/// <summary> ç”µè„‘è‡ªåŠ¨å‡ºç‰Œ </summary>
+		/// <param name="e"> æ•°æ® </param>
 		private void RoundModel_OthersHandler(ComputerSmartArgs e)
 		{
 			StartCoroutine("DelayOneSecond", e);
 		}
 
-		/// <summary> ÑÓ³Ù³öÅÆ </summary>
-		/// <param name="e"> Êı¾İ </param>
+		/// <summary> å»¶è¿Ÿå‡ºç‰Œ </summary>
+		/// <param name="e"> æ•°æ® </param>
 		/// <returns>  </returns>
 		IEnumerator DelayOneSecond(ComputerSmartArgs e)
 		{
@@ -170,7 +171,7 @@ namespace Game
 			}
 			else
 			{
-				Debug.LogWarning("Çë³öÓĞĞ§µÄÅÆĞÍ!");
+				Debug.LogWarning("è¯·å‡ºæœ‰æ•ˆçš„ç‰Œå‹!");
 			}
 		}
 

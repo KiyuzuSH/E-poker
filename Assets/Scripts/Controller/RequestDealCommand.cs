@@ -2,8 +2,9 @@ using strange.extensions.command.impl;
 using strange.extensions.context.api;
 using System.Collections;
 using UnityEngine;
+using Game.Args;
 
-namespace Game
+namespace Game.Controller
 {
 	public class RequestDealCommand : EventCommand
 	{
@@ -14,12 +15,12 @@ namespace Game
 		public override void Execute()
 		{
 			CardModel.Shuffle();
-			//·¢ÅÆ
+			//å‘ç‰Œ
 			GameRoot.GetComponent<GameRoot>().StartCoroutine(DealCard());
 		}
 
-		/// <summary> ·¢ÅÆ </summary>
-		/// <param name="cType">¸øË­</param>
+		/// <summary> å‘ç‰Œ </summary>
+		/// <param name="cType">ç»™è°</param>
 		private void DealTo(CharacterType cType)
 		{
 			Card card = CardModel.DealCard(cType);
@@ -36,14 +37,14 @@ namespace Game
 				if(curr == CharacterType.Desk || curr == CharacterType.Library)
 					curr = CharacterType.PlayerC;
 				DealTo(curr);
-				// »»ÈË
+				// æ¢äºº
 				curr++;
-				// µÈ0.1Ãë
+				// ç­‰0.1ç§’
 				yield return new WaitForEndOfFrame();
 			}
 
 
-			// ·¢ÅÆ½áÊøÍ¨Öª
+			// å‘ç‰Œç»“æŸé€šçŸ¥
 			dispatcher.Dispatch(ViewEvent.COMPLETE_DEAL);
 		}
 

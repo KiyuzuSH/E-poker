@@ -2,14 +2,14 @@ using UnityEngine;
 
 namespace Game
 {
-	/// <summary> ÓÎÏ·ËùĞèµÄ³£Á¿ </summary>
+	/// <summary> æ¸¸æˆæ‰€éœ€çš„å¸¸é‡ </summary>
 	public class Consts
 	{
-		/// <summary> ÓÎÏ·Êı¾İµÄÂ·¾¶ </summary>
+		/// <summary> æ¸¸æˆæ•°æ®çš„è·¯å¾„ </summary>
 		public static readonly string DataPath = Application.persistentDataPath+@"\data.xml";
 	}
 
-	/// <summary> View µÄÊÂ¼şÀàĞÍ </summary>
+	/// <summary> View çš„äº‹ä»¶ç±»å‹ </summary>
 	public enum ViewEvent
 	{
 		QUIT_GAME = -63,
@@ -23,7 +23,7 @@ namespace Game
 		COMPLETE_PLAY = 5,
 	}
 
-	/// <summary> ÃüÁîÊÂ¼şÀàĞÍ </summary>
+	/// <summary> å‘½ä»¤äº‹ä»¶ç±»å‹ </summary>
 	public enum CommandEvent
 	{
 		QuitGame = -63,
@@ -37,7 +37,7 @@ namespace Game
 		PassCard = 6,
 	}
 
-	/// <summary> UI Ãæ°åµÄÀàĞÍ </summary>
+	/// <summary> UI é¢æ¿çš„ç±»å‹ </summary>
 	public enum PanelType
 	{
 		Start,
@@ -47,27 +47,27 @@ namespace Game
 		GameOver,
 	}
 
-	/// <summary> ½ÇÉ«ÀàĞÍ </summary>
+	/// <summary> è§’è‰²ç±»å‹ </summary>
 	public enum CharacterType
 	{
-		Library = 0,	// ÅÆ¿â
-		PlayerC = 1,	// Ö÷ÊÓ½Ç
-		PlayerR = 2,	// ×ó±ß
-		PlayerL = 3,	// ÓÒ±ß
-		Desk			// ÅÆ×À
+		Library = 0,	// ç‰Œåº“
+		PlayerC = 1,	// ä¸»è§†è§’
+		PlayerR = 2,	// å·¦è¾¹
+		PlayerL = 3,	// å³è¾¹
+		Desk			// ç‰Œæ¡Œ
 	}
 
-	/// <summary> »¨É« </summary>
+	/// <summary> èŠ±è‰² </summary>
 	public enum Colours
 	{
 		None,
-		Club,	//Ã·»¨
-		Heart,	//ºìÌÒ
-		Spade,	//ºÚÌÒ
-		Square	//·½Æ¬
+		Club,	//æ¢…èŠ±
+		Heart,	//çº¢æ¡ƒ
+		Spade,	//é»‘æ¡ƒ
+		Square	//æ–¹ç‰‡
 	}
 
-	/// <summary> ¿¨ÅÆÈ¨ÖØ </summary>
+	/// <summary> å¡ç‰Œæƒé‡ </summary>
 	public enum Weight
 	{
 		Three,
@@ -87,19 +87,19 @@ namespace Game
 		RedJoker
 	}
 
-	/// <summary> ³öÅÆÀàĞÍ </summary>
+	/// <summary> å‡ºç‰Œç±»å‹ </summary>
 	public enum CardType
 	{
 		None,
-		Single,			//µ¥ÕÅ
-		Double,         //¶Ô×Ó
-		Straight,		//Ë³×Ó
-		DoubleStraight,	//½ãÃÃ»¨
-		TripleStraight,	//·É»ú
-		Three,			//ÈıÕÅ
-		ThreeOne,		//Èı´øÒ»
-		ThreeTwo,		//Èı´ø¶ş
-		Bomb,			//Õ¨µ¯
+		Single,			//å•å¼ 
+		Double,         //å¯¹å­
+		Straight,		//é¡ºå­
+		DoubleStraight,	//å§å¦¹èŠ±
+		TripleStraight,	//é£æœº
+		Three,			//ä¸‰å¼ 
+		ThreeOne,		//ä¸‰å¸¦ä¸€
+		ThreeTwo,		//ä¸‰å¸¦äºŒ
+		Bomb,			//ç‚¸å¼¹
 		JokerBomb,
 	}
 }

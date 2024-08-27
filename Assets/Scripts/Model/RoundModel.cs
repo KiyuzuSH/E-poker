@@ -1,14 +1,15 @@
 using System;
+using Game.Args;
 
 namespace Game
 {
-	/// <summary> ³öÅÆ»ØºÏÀà </summary>
+	/// <summary> å‡ºç‰Œå›åˆç±» </summary>
 	public class RoundModel
 	{
-		/// <summary> Íæ¼Ò³öÅÆÊÂ¼ş </summary>
+		/// <summary> ç©å®¶å‡ºç‰Œäº‹ä»¶ </summary>
 		public static event Action<bool> PlayerHandler;
 
-		/// <summary> ËûÈË³öÅÆÊÂ¼ş </summary>
+		/// <summary> ä»–äººå‡ºç‰Œäº‹ä»¶ </summary>
 		public static event Action<ComputerSmartArgs> OthersHandler;
 
 		private CharacterType biggestCharacter;
@@ -19,42 +20,42 @@ namespace Game
 		private int currentWeight;
 		private int currentLength;
 
-		/// <summary> ³öÅÆµÄ³¤¶È </summary>
+		/// <summary> å‡ºç‰Œçš„é•¿åº¦ </summary>
 		public int Length
 		{
 			get { return currentLength; }
 			set { currentLength = value; }
 		}
 
-		/// <summary> ³öÅÆµÄÈ¨Öµ </summary>
+		/// <summary> å‡ºç‰Œçš„æƒå€¼ </summary>
 		public int Weight
 		{
 			get { return currentWeight; }
 			set { currentWeight = value; }
 		}
 
-		/// <summary> ³öÅÆÀàĞÍ </summary>
+		/// <summary> å‡ºç‰Œç±»å‹ </summary>
 		public CardType CardType
 		{
 			get { return currentType; }
 			set { currentType = value; }
 		}
 
-		/// <summary> ×î´óµÄ³öÅÆÈË </summary>
+		/// <summary> æœ€å¤§çš„å‡ºç‰Œäºº </summary>
 		public CharacterType Biggest
 		{
 			get { return biggestCharacter; }
 			set { biggestCharacter = value; }
 		}
 
-		/// <summary> µ±Ç°³öÅÆÕß </summary>
+		/// <summary> å½“å‰å‡ºç‰Œè€… </summary>
 		public CharacterType Current
 		{
 			get { return currentCharacter; }
 			set { currentCharacter = value; }
 		}
 
-		/// <summary> ³õÊ¼»¯³öÅÆ»ØºÏ </summary>
+		/// <summary> åˆå§‹åŒ–å‡ºç‰Œå›åˆ </summary>
 		public void InitRound()
 		{
 			this.currentCharacter = CharacterType.Desk;
@@ -64,8 +65,8 @@ namespace Game
 			this.currentLength = 0;
 		}
 
-		/// <summary> ¿ªÊ¼ÓÎÏ· </summary>
-		/// <param name="cType"> Íæ¼ÒÀàĞÍ </param>
+		/// <summary> å¼€å§‹æ¸¸æˆ </summary>
+		/// <param name="cType"> ç©å®¶ç±»å‹ </param>
 		public void Start(CharacterType cType)
 		{
 			this.currentCharacter = cType;
@@ -73,7 +74,7 @@ namespace Game
 			BeginWith(cType);
 		}
 
-		/// <summary> ×ª»»³öÅÆ </summary>
+		/// <summary> è½¬æ¢å‡ºç‰Œ </summary>
 		public void Turn()
 		{
 			currentCharacter++;
@@ -83,19 +84,19 @@ namespace Game
 			BeginWith(currentCharacter);
 		}
 
-		/// <summary> ¿ªÊ¼³öÅÆ </summary>
-		/// <param name="cType"> Ë­ </param>
+		/// <summary> å¼€å§‹å‡ºç‰Œ </summary>
+		/// <param name="cType"> è° </param>
 		private void BeginWith(CharacterType cType)
 		{
 			if(cType == CharacterType.PlayerC)
 			{
-				// Íæ¼Ò³öÅÆ
+				// ç©å®¶å‡ºç‰Œ
 				if(PlayerHandler != null)
 					PlayerHandler(biggestCharacter != CharacterType.PlayerC);
 			}
 			else
 			{
-				// µÈÈË³öÅÆ
+				// ç­‰äººå‡ºç‰Œ
 				if(OthersHandler != null)
 				{
 					ComputerSmartArgs e = new ComputerSmartArgs()

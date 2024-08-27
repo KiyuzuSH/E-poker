@@ -1,6 +1,6 @@
 ﻿using strange.extensions.command.impl;
 
-namespace Game
+namespace Game.Controller
 {
 	public class PassCardCommand : Command
 	{

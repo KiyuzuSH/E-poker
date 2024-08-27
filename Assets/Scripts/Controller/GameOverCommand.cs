@@ -1,7 +1,8 @@
 ﻿using ObjPool;
 using strange.extensions.command.impl;
+using Game.Args;
 
-namespace Game
+namespace Game.Controller
 {
 	public class GameOverCommand : EventCommand
 	{

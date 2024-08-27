@@ -6,12 +6,12 @@ using System.Collections.Generic;
 
 namespace Game
 {
-	/// <summary> ÊµÓÃÏîÄ¿ </summary>
+	/// <summary> å®ç”¨é¡¹ç›® </summary>
 	public static class Utilities
 	{
 		private static Transform uiRoot;
 
-		/// <summary> UI µÄ¸ù½Úµã"RootCanvas" </summary>
+		/// <summary> UI çš„æ ¹èŠ‚ç‚¹"RootCanvas" </summary>
 		public static Transform UIRoot
 		{
 			get
@@ -22,15 +22,15 @@ namespace Game
 			}
 		}
 
-		/// <summary> ´´½¨ UI Ãæ°å </summary>
-		/// <param name="panelType"> UI Ãæ°åÀàĞÍ </param>
-		/// <returns> ·µ»Ø UI ÊµÀı </returns>
+		/// <summary> åˆ›å»º UI é¢æ¿ </summary>
+		/// <param name="panelType"> UI é¢æ¿ç±»å‹ </param>
+		/// <returns> è¿”å› UI å®ä¾‹ </returns>
 		public static GameObject CreateUIPanel(PanelType panelType)
 		{
 			GameObject prefab=Resources.Load<GameObject>("Prefabs/"+panelType.ToString()+"Panel");
 			if(null == prefab)
 			{
-				Debug.LogWarning("ÃûÎª " + panelType.ToString() + " µÄ UI Ãæ°å²»´æÔÚ");
+				Debug.LogWarning("åä¸º " + panelType.ToString() + " çš„ UI é¢æ¿ä¸å­˜åœ¨");
 				return null;
 			}
 			else
@@ -42,7 +42,7 @@ namespace Game
 			}
 		}
 
-		/// <summary> ÓÃ UTF-8 ±£´æÊı¾İ </summary>
+		/// <summary> ç”¨ UTF-8 ä¿å­˜æ•°æ® </summary>
 		public static void SaveData(Data data)
 		{
 			string fileName=Consts.DataPath;
@@ -56,13 +56,13 @@ namespace Game
 			stream.Close();
 		}
 
-		/// <summary> ¶ÁÈ¡Êı¾İ </summary>
-		/// <returns> Êı¾İ </returns>
+		/// <summary> è¯»å–æ•°æ® </summary>
+		/// <returns> æ•°æ® </returns>
 		public static Data LoadData()
 		{
 			Data data=new Data();
 			Stream stream = new FileStream(Consts.DataPath,FileMode.Open,FileAccess.Read);
-			// ºöÂÔ±ê¼Ç = true
+			// å¿½ç•¥æ ‡è®° = true
 			StreamReader sr = new StreamReader(stream, true);
 			XmlSerializer xmlSerializer = new XmlSerializer(data.GetType());
 			data = xmlSerializer.Deserialize(sr) as Data;
@@ -71,9 +71,9 @@ namespace Game
 			return data;
 		}
 
-		/// <summary> ¿¨ÅÆÅÅĞò </summary>
-		/// <param name="cards"> Ñ¡ÔñµÄÅÆ </param>
-		/// <param name="asc"> ÊÇ·ñÉıĞò </param>
+		/// <summary> å¡ç‰Œæ’åº </summary>
+		/// <param name="cards"> é€‰æ‹©çš„ç‰Œ </param>
+		/// <param name="asc"> æ˜¯å¦å‡åº </param>
 		public static void Sort(List<Card> cards, bool asc)
 		{
 			cards.Sort(

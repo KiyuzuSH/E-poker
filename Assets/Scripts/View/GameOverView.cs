@@ -7,7 +7,7 @@ namespace Game
 {
 	public class GameOverView : EventView
 	{
-		[Inject(ContextKeys.CONTEXT_DISPATCHER)] public IEventDispatcher dispatcher { get; set; }
+		[Inject(ContextKeys.CONTEXT_DISPATCHER)] public IEventDispatcher _EventDispatcher { get; set; }
 
 		private Button btn_Restart;
 		private Button btn_Quit;
@@ -28,13 +28,13 @@ namespace Game
 
 		public void OnRestartClick()
 		{
-			dispatcher.Dispatch(ViewEvent.RESTART_GAME);
+			_EventDispatcher.Dispatch(ViewEvent.RESTART_GAME);
 			Destroy(gameObject);
 		}
 
 		public void onQuitClick()
 		{
-			dispatcher.Dispatch(ViewEvent.QUIT_GAME, null);
+			_EventDispatcher.Dispatch(ViewEvent.QUIT_GAME, null);
 		}
 	}
 }

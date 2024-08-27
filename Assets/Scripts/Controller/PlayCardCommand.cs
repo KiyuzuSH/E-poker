@@ -1,6 +1,7 @@
 using strange.extensions.command.impl;
+using Game.Args;
 
-namespace Game
+namespace Game.Controller
 {
 	public class PlayCardCommand : EventCommand
 	{
@@ -23,18 +24,18 @@ namespace Game
 					dispatcher.Dispatch(ViewEvent.SUCCESS_PLAY);
 				else
 				{
-					UnityEngine.Debug.LogWarning("非法出牌!");
+					UnityEngine.Debug.LogWarning("闈炴硶鍑虹墝!");
 					return;
 				}
 			}
 
-			// 保存回合信息
+			// 淇濆瓨鍥炲悎淇℃伅
 			RoundModel.Length = e.Length;
 			RoundModel.Weight = e.Weight;
 			RoundModel.CardType = e.cardType;
 			RoundModel.Biggest = e.characterType;
 
-			// 转换出牌
+			// 杞崲鍑虹墝
 			RoundModel.Turn();
 		}
 	}

@@ -1,9 +1,9 @@
 using strange.extensions.command.impl;
 using UnityEngine;
 
-namespace Game
+namespace Game.Controller
 {
-	/// <summary> ¿ªÊ¼°´Å¥ </summary>
+	/// <summary> å¼€å§‹æŒ‰é’® </summary>
 	public class StartButtonCommand : EventCommand
 	{
 		public override void Execute()
@@ -14,7 +14,7 @@ namespace Game
 		}
 	}
 
-	/// <summary> ÍË³ö°´Å¥ </summary>
+	/// <summary> é€€å‡ºæŒ‰é’® </summary>
 	public class QuitButtonCommand : EventCommand
 	{
 		public override void Execute()

@@ -1,6 +1,6 @@
 namespace Game
 {
-	/// <summary> Êý¾ÝÀà </summary>
+	/// <summary> ?????? </summary>
 	[System.Serializable]
 	public class Data
 	{

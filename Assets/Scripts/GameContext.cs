@@ -1,3 +1,4 @@
+using Game.Controller;
 using strange.extensions.context.api;
 using strange.extensions.context.impl;
 using UnityEngine;
@@ -8,7 +9,7 @@ namespace Game
 	{
 		public GameContext(MonoBehaviour view, bool autoMapping):base(view, autoMapping) { }
 
-		/// <summary> °ó¶¨Ó³Éä </summary>
+		/// <summary> ï¿½ï¿½Ó³ï¿½ï¿½ </summary>
 		protected override void mapBindings()
 		{
 			injectionBinder.Bind<CardModel>().To<CardModel>().ToSingleton();

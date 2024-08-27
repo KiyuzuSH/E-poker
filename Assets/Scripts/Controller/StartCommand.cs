@@ -1,7 +1,7 @@
 using strange.extensions.command.impl;
 using System.IO;
 
-namespace Game
+namespace Game.Controller
 {
 	public class StartCommand : Command
 	{
@@ -12,15 +12,15 @@ namespace Game
 		public override void Execute()
 		{
 			Utilities.CreateUIPanel(PanelType.Start);
-			// ³õÊ¼»¯
+			// åˆå§‹åŒ–
 			CardModel.InitCardLibrary();
 			RoundModel.InitRound();
-			// ¶ÁÈ¡Êı¾İ
+			// è¯»å–æ•°æ®
 			GetData();
 
 		}
 
-		/// <summary> »ñÈ¡Êı¾İ(´æµµ)·½·¨ </summary>
+		/// <summary> è·å–æ•°æ®(å­˜æ¡£)æ–¹æ³• </summary>
 		private void GetData()
 		{
 			string fileName = Consts.DataPath;
